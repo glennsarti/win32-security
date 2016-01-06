@@ -3,3 +3,4 @@ Gemfile.local
 .bundle/
 /.project
 .idea/
+*.gem
