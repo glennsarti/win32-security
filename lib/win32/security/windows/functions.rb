@@ -90,7 +90,7 @@ module Windows
       attach_pfunc :IsValidAcl, [:ptr], :bool
       attach_pfunc :IsValidSid, [:ptr], :bool
       attach_pfunc :IsWellKnownSid, [:ptr, :int], :bool
-      attach_pfunc :LookupAccountName, :LookupAccountNameA,
+      attach_pfunc :LookupAccountName, :LookupAccountNameW,
         [:string, :string, :ptr, :ptr, :ptr, :ptr, :ptr], :bool
       attach_pfunc :LookupAccountSid, :LookupAccountSidA,
         [:string, :ptr, :ptr, :ptr, :ptr, :ptr, :ptr], :bool

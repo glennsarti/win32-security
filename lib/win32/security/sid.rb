@@ -255,13 +255,13 @@ module Win32
           end
         else
           bool = LookupAccountName(
-            host,
-            account,
-            sid,
-            sid_size,
-            domain,
-            domain_size,
-            use_ptr
+              host.encode("UTF-16LE"),
+              account.encode("UTF-16LE"),
+              sid,
+              sid_size,
+              domain,
+              domain_size,
+              use_ptr
           )
           unless bool
             raise SystemCallError.new("LookupAccountName", FFI.errno)
